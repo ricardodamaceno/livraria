@@ -41,6 +41,7 @@
             this.pneLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.frmAtendente1 = new livraria.FrmAtendente();
             this.pneMenu.SuspendLayout();
             this.pneLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -251,11 +252,19 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // frmAtendente1
+            // 
+            this.frmAtendente1.Location = new System.Drawing.Point(220, 0);
+            this.frmAtendente1.Name = "frmAtendente1";
+            this.frmAtendente1.Size = new System.Drawing.Size(689, 541);
+            this.frmAtendente1.TabIndex = 2;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 541);
+            this.Controls.Add(this.frmAtendente1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pneMenu);
             this.Name = "FrmMenu";
@@ -285,5 +294,6 @@
         private Panel pneLogo;
         private Label label1;
         private PictureBox pictureBox1;
+        private FrmAtendente frmAtendente1;
     }
 }
