@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace livraria
 {
@@ -16,6 +17,15 @@ namespace livraria
         {
             InitializeComponent();
         }
+
+        //conecxão com banco de dados (SSPI = autenticação do windows)
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_livraria");
+
+        //para dar os comandos sql
+        //SqlCommand cm = new SqlCommand();
+
+        //serve para fazer uma busca no banco de dados após um select
+        SqlDataReader dr;
 
         private void desabilitaCampos()
         {
@@ -45,6 +55,7 @@ namespace livraria
             txtNome.Text = "";
             txtLogin.Clear();
             txtSenha.Clear();
+            txtNome.Focus();
         }
 
         private void FrmAtendente_Load(object sender, EventArgs e)
@@ -84,6 +95,38 @@ namespace livraria
             {
                 MessageBox.Show("O campo senha deve conter no mínimo 8 caracteres", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSenha.Focus();
+            }
+            else
+            {
+                try
+                {
+                    string nome = txtNome.Text;
+                    string login = txtLogin.Text;
+                    string senha = txtSenha.Text;
+
+                    string sql = "insert into tbl_atendente(ds_Login, ds_Senha, nm_atendente)values(@login,@senha,@atendente)";
+
+                    SqlCommand cm = new SqlCommand(sql, cn);
+
+                    cm.Parameters.Add("@login", SqlDbType.VarChar).Value = login;
+                    cm.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
+                    cm.Parameters.Add("@atendente", SqlDbType.VarChar).Value = nome;
+
+                    cn.Open();
+                    cm.ExecuteNonQuery();//executa sem fazer consulta(usado para insert, update, delete)
+                    MessageBox.Show("Os dados foram gravados com sucesso!", "Inserção de dados concluído.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNome.Focus();
+                    limparCampos();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cn.Close();
+                }
+                finally
+                {
+                    cn.Close();
+                }
             }
         }
     }

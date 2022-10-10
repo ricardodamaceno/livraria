@@ -32,12 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFunc = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,25 +93,25 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(50, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Senha:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(50, 160);
+            this.label5.Location = new System.Drawing.Point(50, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Login:";
+            this.label5.Size = new System.Drawing.Size(61, 21);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Senha:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(50, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Login:";
             // 
             // txtNome
             // 
@@ -141,14 +141,14 @@
             this.txtLogin.Size = new System.Drawing.Size(154, 25);
             this.txtLogin.TabIndex = 8;
             // 
-            // dataGridView1
+            // dgvFunc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 348);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(407, 150);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFunc.Location = new System.Drawing.Point(50, 348);
+            this.dgvFunc.Name = "dgvFunc";
+            this.dgvFunc.RowTemplate.Height = 25;
+            this.dgvFunc.Size = new System.Drawing.Size(407, 150);
+            this.dgvFunc.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -253,12 +253,12 @@
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFunc);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCod);
             this.Controls.Add(this.label2);
@@ -266,7 +266,7 @@
             this.Name = "FrmAtendente";
             this.Size = new System.Drawing.Size(689, 541);
             this.Load += new System.EventHandler(this.FrmAtendente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -280,12 +280,12 @@
         private Label label2;
         private Label lblCod;
         private Label label3;
-        private Label label4;
         private Label label5;
+        private Label label4;
         private TextBox txtNome;
-        private TextBox txtSenha;
         private TextBox txtLogin;
-        private DataGridView dataGridView1;
+        private TextBox txtSenha;
+        private DataGridView dgvFunc;
         private GroupBox groupBox1;
         private TextBox txtBusca;
         private Button btnNovo;
