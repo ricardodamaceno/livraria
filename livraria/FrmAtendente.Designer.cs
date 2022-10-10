@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,17 +60,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Funcionário";
             // 
-            // label2
+            // lblCodigo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(50, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Código:";
-            this.label2.Visible = false;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCodigo.ForeColor = System.Drawing.Color.Red;
+            this.lblCodigo.Location = new System.Drawing.Point(50, 100);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(69, 21);
+            this.lblCodigo.TabIndex = 1;
+            this.lblCodigo.Text = "Código:";
+            this.lblCodigo.Visible = false;
             // 
             // lblCod
             // 
@@ -152,6 +152,7 @@
             this.dgvFunc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFunc.Size = new System.Drawing.Size(407, 150);
             this.dgvFunc.TabIndex = 9;
+            this.dgvFunc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvFunc_MouseDoubleClick);
             // 
             // groupBox1
             // 
@@ -265,7 +266,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblCod);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label1);
             this.Name = "FrmAtendente";
             this.Size = new System.Drawing.Size(689, 541);
@@ -281,7 +282,7 @@
         #endregion
 
         private Label label1;
-        private Label label2;
+        private Label lblCodigo;
         private Label lblCod;
         private Label label3;
         private Label label5;

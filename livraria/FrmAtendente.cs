@@ -29,6 +29,8 @@ namespace livraria
 
         private void desabilitaCampos()
         {
+            lblCod.Visible = false;
+            lblCodigo.Visible = false;
             txtNome.Enabled = false;
             txtLogin.Enabled = false;
             txtSenha.Enabled = false;
@@ -48,6 +50,8 @@ namespace livraria
             btnCancelar.Enabled = true;
             btnNovo.Enabled = false;
             txtNome.Focus();
+            txtBusca.Text = "";
+            //dgvFunc.DataSource = null;
         }
 
         private void limparCampos()
@@ -56,6 +60,20 @@ namespace livraria
             txtLogin.Clear();
             txtSenha.Clear();
             txtNome.Focus();
+        }
+
+        private void manipularDados()
+        {
+            lblCod.Visible=true;
+            lblCodigo.Visible=true;
+            btnAlterar.Enabled=true;
+            btnCancelar.Enabled=true;
+            btnRemover.Enabled=true;
+            btnNovo.Enabled=false;
+            btnGravar.Enabled=false;
+            txtNome.Enabled = true;
+            txtLogin.Enabled = true;
+            txtSenha.Enabled = true;
         }
 
         private void FrmAtendente_Load(object sender, EventArgs e)
@@ -167,6 +185,27 @@ namespace livraria
             {
                 //isso é pra não aparecer nada no quadro quando o campo de busca estiver vazio
                 dgvFunc.DataSource = null;
+            }
+        }
+
+        private void carregaAtendente()
+        {
+            lblCod.Text = dgvFunc.SelectedRows[0].Cells[0].Value.ToString();
+            txtLogin.Text = dgvFunc.SelectedRows[0].Cells[1].Value.ToString();
+            txtNome.Text = dgvFunc.SelectedRows[0].Cells[2].Value.ToString();
+            txtSenha.Text = dgvFunc.SelectedRows[0].Cells[3].Value.ToString();
+            manipularDados();
+        }
+
+        private void dgvFunc_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                carregaAtendente();
+            }
+            catch(Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
             }
         }
     }
