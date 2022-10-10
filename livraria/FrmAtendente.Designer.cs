@@ -129,7 +129,7 @@
             this.txtSenha.MaxLength = 8;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(154, 25);
-            this.txtSenha.TabIndex = 7;
+            this.txtSenha.TabIndex = 8;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtLogin
@@ -139,14 +139,17 @@
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(154, 25);
-            this.txtLogin.TabIndex = 8;
+            this.txtLogin.TabIndex = 7;
             // 
             // dgvFunc
             // 
+            this.dgvFunc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFunc.Location = new System.Drawing.Point(50, 348);
+            this.dgvFunc.MultiSelect = false;
             this.dgvFunc.Name = "dgvFunc";
             this.dgvFunc.RowTemplate.Height = 25;
+            this.dgvFunc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFunc.Size = new System.Drawing.Size(407, 150);
             this.dgvFunc.TabIndex = 9;
             // 
@@ -169,6 +172,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(286, 25);
             this.txtBusca.TabIndex = 11;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // btnNovo
             // 

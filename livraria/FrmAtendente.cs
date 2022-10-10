@@ -22,7 +22,7 @@ namespace livraria
         SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_livraria");
 
         //para dar os comandos sql
-        //SqlCommand cm = new SqlCommand();
+        SqlCommand cm = new SqlCommand();
 
         //serve para fazer uma busca no banco de dados após um select
         SqlDataReader dr;
@@ -127,6 +127,46 @@ namespace livraria
                 {
                     cn.Close();
                 }
+            }
+        }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBusca.Text != "")
+            {
+                try
+                {
+                    cn.Open();
+                    //o uso do "like" é para o sistema de busca no sql e o uso da "%" faz referência ao que vem antes ou depois do conteúdo 
+                    cm.CommandText = "select * from tbl_atendente where nm_atendente like ('" + txtBusca.Text + "%')";
+                    cm.Connection = cn;
+
+                    //recebe os dados de uma tabela após um select
+                    SqlDataAdapter da = new SqlDataAdapter();    
+
+                    //pode representar uma ou mais tabelas de dados que ficarão alocadas em memória
+                    DataTable dt = new DataTable();
+
+                    //recebe os dados da instrução select
+                    da.SelectCommand = cm;
+
+                    da.Fill(dt); //preenche o DataTable "dt"
+
+                    dgvFunc.DataSource = dt; //preenche o quadro "dgvFunc" com o conteúdo da tabela
+                    
+                    cn.Close();
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally { cn.Close(); }
+            }
+            else
+            {
+                //isso é pra não aparecer nada no quadro quando o campo de busca estiver vazio
+                dgvFunc.DataSource = null;
             }
         }
     }
