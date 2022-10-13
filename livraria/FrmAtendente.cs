@@ -60,6 +60,7 @@ namespace livraria
             txtLogin.Clear();
             txtSenha.Clear();
             txtNome.Focus();
+            txtBusca.Clear();  
         }
 
         private void manipularDados()
@@ -192,8 +193,8 @@ namespace livraria
         {
             lblCod.Text = dgvFunc.SelectedRows[0].Cells[0].Value.ToString();
             txtLogin.Text = dgvFunc.SelectedRows[0].Cells[1].Value.ToString();
-            txtNome.Text = dgvFunc.SelectedRows[0].Cells[2].Value.ToString();
-            txtSenha.Text = dgvFunc.SelectedRows[0].Cells[3].Value.ToString();
+            txtNome.Text = dgvFunc.SelectedRows[0].Cells[3].Value.ToString();
+            txtSenha.Text = dgvFunc.SelectedRows[0].Cells[2].Value.ToString();
             manipularDados();
         }
 
@@ -206,6 +207,66 @@ namespace livraria
             catch(Exception ex)
             {
                 //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo nome", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNome.Focus();
+            }
+            else if (txtLogin.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo login", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLogin.Focus();
+            }
+            else if (txtSenha.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo senha", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenha.Focus();
+            }
+            else if (txtSenha.TextLength < 8)
+            {
+                MessageBox.Show("O campo senha deve conter no mínimo 8 caracteres", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenha.Focus();
+            }
+            else
+            {
+                try
+                {
+                    string nome = txtNome.Text;
+                    string login = txtLogin.Text;
+                    string senha = txtSenha.Text;
+                    int cd = Convert.ToInt32(lblCod.Text);
+
+                    //atualizando os campos , para alterar uma informação precisa ter uma informação constante que 
+                    //no caso foi usado o código do atendente
+                    string sql = "update tbl_atendente set ds_Login=@login, ds_Senha=@senha, nm_atendente=@atendente where cd_Atendente=@cd";
+
+                    SqlCommand cm = new SqlCommand(sql, cn);
+
+                    cm.Parameters.Add("@login", SqlDbType.VarChar).Value = login;
+                    cm.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha;
+                    cm.Parameters.Add("@atendente", SqlDbType.VarChar).Value = nome;
+                    cm.Parameters.Add("@cd", SqlDbType.Int).Value = cd;
+
+                    cn.Open();
+                    cm.ExecuteNonQuery();//executa sem fazer consulta(usado para insert, update, delete)
+                    MessageBox.Show("Os dados foram alterados com sucesso!", "Alteração de dados concluída.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNome.Focus();
+                    limparCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    cn.Close();
+                }
+                finally
+                {
+                    cn.Close();
+                }
             }
         }
     }

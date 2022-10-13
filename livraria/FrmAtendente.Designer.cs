@@ -45,6 +45,9 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rdbAtivo = new System.Windows.Forms.RadioButton();
+            this.rdbInativo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +100,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(50, 190);
+            this.label5.Location = new System.Drawing.Point(263, 159);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 4;
@@ -119,16 +122,16 @@
             this.txtNome.Location = new System.Drawing.Point(122, 124);
             this.txtNome.MaxLength = 60;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(286, 25);
+            this.txtNome.Size = new System.Drawing.Size(335, 25);
             this.txtNome.TabIndex = 6;
             // 
             // txtSenha
             // 
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSenha.Location = new System.Drawing.Point(122, 186);
+            this.txtSenha.Location = new System.Drawing.Point(335, 155);
             this.txtSenha.MaxLength = 8;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(154, 25);
+            this.txtSenha.Size = new System.Drawing.Size(123, 25);
             this.txtSenha.TabIndex = 8;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
@@ -138,7 +141,7 @@
             this.txtLogin.Location = new System.Drawing.Point(122, 155);
             this.txtLogin.MaxLength = 20;
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(154, 25);
+            this.txtLogin.Size = new System.Drawing.Size(126, 25);
             this.txtLogin.TabIndex = 7;
             // 
             // dgvFunc
@@ -218,6 +221,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnRemover
             // 
@@ -248,10 +252,47 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(50, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 21);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Login:";
+            // 
+            // rdbAtivo
+            // 
+            this.rdbAtivo.AutoSize = true;
+            this.rdbAtivo.Checked = true;
+            this.rdbAtivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rdbAtivo.Location = new System.Drawing.Point(122, 190);
+            this.rdbAtivo.Name = "rdbAtivo";
+            this.rdbAtivo.Size = new System.Drawing.Size(69, 25);
+            this.rdbAtivo.TabIndex = 17;
+            this.rdbAtivo.TabStop = true;
+            this.rdbAtivo.Text = "Ativo";
+            this.rdbAtivo.UseVisualStyleBackColor = true;
+            // 
+            // rdbInativo
+            // 
+            this.rdbInativo.AutoSize = true;
+            this.rdbInativo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rdbInativo.Location = new System.Drawing.Point(197, 190);
+            this.rdbInativo.Name = "rdbInativo";
+            this.rdbInativo.Size = new System.Drawing.Size(82, 25);
+            this.rdbInativo.TabIndex = 18;
+            this.rdbInativo.Text = "Inativo";
+            this.rdbInativo.UseVisualStyleBackColor = true;
+            // 
             // FrmAtendente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.rdbInativo);
+            this.Controls.Add(this.rdbAtivo);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnAlterar);
@@ -298,5 +339,8 @@
         private Button btnAlterar;
         private Button btnRemover;
         private Button btnCancelar;
+        private Label label2;
+        private RadioButton rdbAtivo;
+        private RadioButton rdbInativo;
     }
 }
