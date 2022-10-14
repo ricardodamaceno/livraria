@@ -61,6 +61,9 @@ namespace livraria
             txtSenha.Clear();
             txtNome.Focus();
             txtBusca.Clear();  
+            rdbAtivo.Checked = true;
+            lblCod.Visible = false;
+            lblCodigo.Visible=false;
         }
 
         private void manipularDados()
@@ -186,6 +189,7 @@ namespace livraria
             {
                 //isso é pra não aparecer nada no quadro quando o campo de busca estiver vazio
                 dgvFunc.DataSource = null;
+                desabilitaCampos();
             }
         }
 
@@ -195,19 +199,27 @@ namespace livraria
             txtLogin.Text = dgvFunc.SelectedRows[0].Cells[1].Value.ToString();
             txtNome.Text = dgvFunc.SelectedRows[0].Cells[3].Value.ToString();
             txtSenha.Text = dgvFunc.SelectedRows[0].Cells[2].Value.ToString();
+            string valor = dgvFunc.SelectedRows[0].Cells[4].Value.ToString();
+            //MessageBox.Show(valor);
+            if(valor == "True")
+            {
+                rdbAtivo.Checked = true;
+            }
+            else
+            {
+                rdbInativo.Checked = true;
+            }
             manipularDados();
         }
 
         private void dgvFunc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            try
+            carregaAtendente();
+            if(rdbInativo.Checked)
             {
-                carregaAtendente();
+                btnRemover.Enabled = false;
             }
-            catch(Exception ex)
-            {
-                //MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -232,6 +244,10 @@ namespace livraria
                 MessageBox.Show("O campo senha deve conter no mínimo 8 caracteres", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSenha.Focus();
             }
+            else if (rdbInativo.Checked)
+            {
+                MessageBox.Show("Para INATIVAR um funcionário é preciso clicar no botão REMOVER.", "ERRO NA OPERAÇÃO!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
@@ -243,7 +259,7 @@ namespace livraria
 
                     //atualizando os campos , para alterar uma informação precisa ter uma informação constante que 
                     //no caso foi usado o código do atendente
-                    string sql = "update tbl_atendente set ds_Login=@login, ds_Senha=@senha, nm_atendente=@atendente where cd_Atendente=@cd";
+                    string sql = "update tbl_atendente set ds_Login=@login, ds_Senha=@senha, nm_atendente=@atendente, ds_Status=1 where cd_Atendente=@cd";
 
                     SqlCommand cm = new SqlCommand(sql, cn);
 
@@ -268,6 +284,72 @@ namespace livraria
                     cn.Close();
                 }
             }
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo nome", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNome.Focus();
+            }
+            else if (txtLogin.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo login", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtLogin.Focus();
+            }
+            else if (txtSenha.Text == "")
+            {
+                MessageBox.Show("Obrigatório informar o campo senha", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenha.Focus();
+            }
+            else if (txtSenha.TextLength < 8)
+            {
+                MessageBox.Show("O campo senha deve conter no mínimo 8 caracteres", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenha.Focus();
+            }
+            else if (rdbAtivo.Checked)
+            {
+                MessageBox.Show("Para remover o registro você precisa alterar o status para INATIVO.", "ERRO AO TENTAR EXCLUIR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult exclusao = MessageBox.Show("Você tem certeza que deseja remover esse registro?", "EXCLUSÃO DE REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(exclusao == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        int cd = Convert.ToInt32(lblCod.Text);
+
+                        string sql = "update tbl_atendente set ds_Status=0 where cd_Atendente=@cd";
+
+                        SqlCommand cm = new SqlCommand(sql, cn);
+
+                        cm.Parameters.Add("@cd", SqlDbType.Int).Value = cd;
+
+                        cn.Open();
+                        cm.ExecuteNonQuery();//executa sem fazer consulta(usado para insert, update, delete)
+                        MessageBox.Show("O registro foi removido com sucesso!", "Remoção concluída!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtNome.Focus();
+                        limparCampos();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        cn.Close();
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+                }
+            }
+
+            
         }
     }
 

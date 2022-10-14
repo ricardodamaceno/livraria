@@ -1,4 +1,6 @@
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace livraria
 {
@@ -63,6 +65,7 @@ namespace livraria
 
                     if (dr.HasRows)
                     {
+
                         FrmMenu menu = new FrmMenu();
                         menu.Show();
                         this.Hide();
