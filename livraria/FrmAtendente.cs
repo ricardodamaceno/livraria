@@ -120,7 +120,7 @@ namespace livraria
             }
             else if (rdbInativo.Checked)
             {
-                MessageBox.Show("Impossível cadastrar um funcionário se o STATUS estiver INATIVO", "ERRO AO GRAVAR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("É impossível cadastrar um funcionário se o STATUS estiver INATIVO", "ERRO AO GRAVAR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
