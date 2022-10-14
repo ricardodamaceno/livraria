@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pneMenu = new System.Windows.Forms.Panel();
+            this.usuarioLogado = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnPedido = new System.Windows.Forms.Button();
             this.btnAutores = new System.Windows.Forms.Button();
@@ -50,6 +53,9 @@
             // pneMenu
             // 
             this.pneMenu.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pneMenu.Controls.Add(this.usuarioLogado);
+            this.pneMenu.Controls.Add(this.label2);
+            this.pneMenu.Controls.Add(this.btnSair);
             this.pneMenu.Controls.Add(this.btnCaixa);
             this.pneMenu.Controls.Add(this.btnPedido);
             this.pneMenu.Controls.Add(this.btnAutores);
@@ -66,6 +72,45 @@
             this.pneMenu.Size = new System.Drawing.Size(220, 541);
             this.pneMenu.TabIndex = 0;
             // 
+            // usuarioLogado
+            // 
+            this.usuarioLogado.AutoSize = true;
+            this.usuarioLogado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.usuarioLogado.ForeColor = System.Drawing.Color.Yellow;
+            this.usuarioLogado.Location = new System.Drawing.Point(12, 511);
+            this.usuarioLogado.Name = "usuarioLogado";
+            this.usuarioLogado.Size = new System.Drawing.Size(0, 21);
+            this.usuarioLogado.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(12, 490);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Usuário Logado:";
+            // 
+            // btnSair
+            // 
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSair.Image = global::livraria.Properties.Resources.sair;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.Location = new System.Drawing.Point(0, 435);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnSair.Size = new System.Drawing.Size(220, 40);
+            this.btnSair.TabIndex = 10;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // btnCaixa
             // 
             this.btnCaixa.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,7 +120,7 @@
             this.btnCaixa.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCaixa.Image = global::livraria.Properties.Resources.caixa1;
             this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaixa.Location = new System.Drawing.Point(0, 420);
+            this.btnCaixa.Location = new System.Drawing.Point(0, 395);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnCaixa.Size = new System.Drawing.Size(220, 40);
@@ -92,7 +137,7 @@
             this.btnPedido.ForeColor = System.Drawing.SystemColors.Control;
             this.btnPedido.Image = global::livraria.Properties.Resources.pedidos1;
             this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedido.Location = new System.Drawing.Point(0, 380);
+            this.btnPedido.Location = new System.Drawing.Point(0, 355);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnPedido.Size = new System.Drawing.Size(220, 40);
@@ -109,7 +154,7 @@
             this.btnAutores.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAutores.Image = global::livraria.Properties.Resources.autores1;
             this.btnAutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutores.Location = new System.Drawing.Point(0, 340);
+            this.btnAutores.Location = new System.Drawing.Point(0, 315);
             this.btnAutores.Name = "btnAutores";
             this.btnAutores.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnAutores.Size = new System.Drawing.Size(220, 40);
@@ -126,7 +171,7 @@
             this.btnEditora.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEditora.Image = global::livraria.Properties.Resources.editora1;
             this.btnEditora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditora.Location = new System.Drawing.Point(0, 300);
+            this.btnEditora.Location = new System.Drawing.Point(0, 275);
             this.btnEditora.Name = "btnEditora";
             this.btnEditora.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnEditora.Size = new System.Drawing.Size(220, 40);
@@ -143,7 +188,7 @@
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCategoria.Image = global::livraria.Properties.Resources.categoria1;
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoria.Location = new System.Drawing.Point(0, 260);
+            this.btnCategoria.Location = new System.Drawing.Point(0, 235);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnCategoria.Size = new System.Drawing.Size(220, 40);
@@ -160,7 +205,7 @@
             this.btnLivros.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLivros.Image = global::livraria.Properties.Resources.livros1;
             this.btnLivros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLivros.Location = new System.Drawing.Point(0, 220);
+            this.btnLivros.Location = new System.Drawing.Point(0, 195);
             this.btnLivros.Name = "btnLivros";
             this.btnLivros.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnLivros.Size = new System.Drawing.Size(220, 40);
@@ -177,7 +222,7 @@
             this.btnFone.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFone.Image = global::livraria.Properties.Resources.telefone1;
             this.btnFone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFone.Location = new System.Drawing.Point(0, 180);
+            this.btnFone.Location = new System.Drawing.Point(0, 155);
             this.btnFone.Name = "btnFone";
             this.btnFone.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnFone.Size = new System.Drawing.Size(220, 40);
@@ -194,7 +239,7 @@
             this.btnCliente.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCliente.Image = global::livraria.Properties.Resources.cliente1;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 140);
+            this.btnCliente.Location = new System.Drawing.Point(0, 115);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnCliente.Size = new System.Drawing.Size(220, 40);
@@ -211,7 +256,7 @@
             this.btnFunc.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFunc.Image = global::livraria.Properties.Resources.funcionarios2;
             this.btnFunc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFunc.Location = new System.Drawing.Point(0, 100);
+            this.btnFunc.Location = new System.Drawing.Point(0, 75);
             this.btnFunc.Name = "btnFunc";
             this.btnFunc.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnFunc.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -227,7 +272,7 @@
             this.pneLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pneLogo.Location = new System.Drawing.Point(0, 0);
             this.pneLogo.Name = "pneLogo";
-            this.pneLogo.Size = new System.Drawing.Size(220, 100);
+            this.pneLogo.Size = new System.Drawing.Size(220, 75);
             this.pneLogo.TabIndex = 0;
             // 
             // label1
@@ -235,7 +280,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(32, 34);
+            this.label1.Location = new System.Drawing.Point(31, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 37);
             this.label1.TabIndex = 0;
@@ -271,7 +316,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenu_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.pneMenu.ResumeLayout(false);
+            this.pneMenu.PerformLayout();
             this.pneLogo.ResumeLayout(false);
             this.pneLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -295,5 +342,8 @@
         private Label label1;
         private PictureBox pictureBox1;
         private FrmAtendente frmAtendente1;
+        private Button btnSair;
+        private Label usuarioLogado;
+        private Label label2;
     }
 }

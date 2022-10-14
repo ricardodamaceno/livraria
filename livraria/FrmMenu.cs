@@ -21,5 +21,17 @@ namespace livraria
         {
             Application.Exit();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            login telaLogin = new login();
+            telaLogin.Show();
+            this.Hide();
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            usuarioLogado.Text = login.usuario;
+        }
     }
 }

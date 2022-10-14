@@ -118,6 +118,10 @@ namespace livraria
                 MessageBox.Show("O campo senha deve conter no mínimo 8 caracteres", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSenha.Focus();
             }
+            else if (rdbInativo.Checked)
+            {
+                MessageBox.Show("Impossível cadastrar um funcionário se o STATUS estiver INATIVO", "ERRO AO GRAVAR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
@@ -126,7 +130,7 @@ namespace livraria
                     string login = txtLogin.Text;
                     string senha = txtSenha.Text;
 
-                    string sql = "insert into tbl_atendente(ds_Login, ds_Senha, nm_atendente)values(@login,@senha,@atendente)";
+                    string sql = "insert into tbl_atendente(ds_Login, ds_Senha, nm_atendente, ds_Status)values(@login,@senha,@atendente,1)";
 
                     SqlCommand cm = new SqlCommand(sql, cn);
 
