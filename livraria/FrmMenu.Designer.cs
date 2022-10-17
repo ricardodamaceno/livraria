@@ -43,11 +43,11 @@
             this.btnFunc = new System.Windows.Forms.Button();
             this.pneLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.frmAtendente1 = new livraria.FrmAtendente();
+            this.principal1 = new livraria.principal();
+            this.frmAtendente2 = new livraria.FrmAtendente();
+            this.frmCliente2 = new livraria.FrmCliente();
             this.pneMenu.SuspendLayout();
             this.pneLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pneMenu
@@ -246,6 +246,7 @@
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnFunc
             // 
@@ -264,6 +265,7 @@
             this.btnFunc.TabIndex = 1;
             this.btnFunc.Text = "Funcionario";
             this.btnFunc.UseVisualStyleBackColor = true;
+            this.btnFunc.Click += new System.EventHandler(this.btnFunc_Click);
             // 
             // pneLogo
             // 
@@ -285,32 +287,37 @@
             this.label1.Size = new System.Drawing.Size(159, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "RD Livraria";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
+            // principal1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::livraria.Properties.Resources.Livraria_RD;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(689, 541);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.principal1.Location = new System.Drawing.Point(217, 0);
+            this.principal1.Name = "principal1";
+            this.principal1.Size = new System.Drawing.Size(689, 541);
+            this.principal1.TabIndex = 1;
             // 
-            // frmAtendente1
+            // frmAtendente2
             // 
-            this.frmAtendente1.Location = new System.Drawing.Point(220, 0);
-            this.frmAtendente1.Name = "frmAtendente1";
-            this.frmAtendente1.Size = new System.Drawing.Size(689, 541);
-            this.frmAtendente1.TabIndex = 2;
+            this.frmAtendente2.Location = new System.Drawing.Point(217, 0);
+            this.frmAtendente2.Name = "frmAtendente2";
+            this.frmAtendente2.Size = new System.Drawing.Size(689, 541);
+            this.frmAtendente2.TabIndex = 2;
+            // 
+            // frmCliente2
+            // 
+            this.frmCliente2.Location = new System.Drawing.Point(217, 0);
+            this.frmCliente2.Name = "frmCliente2";
+            this.frmCliente2.Size = new System.Drawing.Size(689, 541);
+            this.frmCliente2.TabIndex = 3;
             // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 541);
-            this.Controls.Add(this.frmAtendente1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.frmCliente2);
+            this.Controls.Add(this.frmAtendente2);
+            this.Controls.Add(this.principal1);
             this.Controls.Add(this.pneMenu);
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -321,7 +328,6 @@
             this.pneMenu.PerformLayout();
             this.pneLogo.ResumeLayout(false);
             this.pneLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,10 +346,11 @@
         private Button btnFunc;
         private Panel pneLogo;
         private Label label1;
-        private PictureBox pictureBox1;
-        private FrmAtendente frmAtendente1;
         private Button btnSair;
         private Label usuarioLogado;
         private Label label2;
+        private principal principal1;
+        private FrmAtendente frmAtendente2;
+        private FrmCliente frmCliente2;
     }
 }

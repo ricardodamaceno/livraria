@@ -259,9 +259,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(50, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
+            this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Login:";
+            this.label2.Text = "Status:";
             // 
             // rdbAtivo
             // 

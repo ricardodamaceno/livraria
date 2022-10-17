@@ -25,7 +25,7 @@ namespace livraria
         SqlCommand cm = new SqlCommand();
 
         //serve para fazer uma busca no banco de dados após um select
-        SqlDataReader dr;
+        //SqlDataReader dr;
 
         private void desabilitaCampos()
         {

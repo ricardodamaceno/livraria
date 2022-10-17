@@ -32,6 +32,22 @@ namespace livraria
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             usuarioLogado.Text = login.usuario;
+            principal1.BringToFront();
+        }
+
+        private void btnFunc_Click(object sender, EventArgs e)
+        {
+            frmAtendente2.BringToFront();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            frmCliente2.BringToFront();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            principal1.BringToFront();
         }
     }
 }
