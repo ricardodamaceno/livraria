@@ -31,11 +31,15 @@ namespace livraria
         private void btnSenha_MouseDown(object sender, MouseEventArgs e)
         {
             txtSenha.UseSystemPasswordChar = false;
+            btnSenha.Visible = false;
+            cadAberto.Visible = true;
         }
 
         private void btnSenha_MouseUp(object sender, MouseEventArgs e)
         {
             txtSenha.UseSystemPasswordChar = true;
+            btnSenha.Visible = true;
+            cadAberto.Visible = false;
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)

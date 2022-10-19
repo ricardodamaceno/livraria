@@ -157,8 +157,8 @@
   <data name="remover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="categoria1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\categoria1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="funcionarios2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\funcionarios1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +178,8 @@
   <data name="livros1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\livros1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="funcionarios2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\funcionarios1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="categoria1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categoria1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,13 +199,16 @@
   <data name="pedidos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pedidos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Livraria RD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Livraria RD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="telefone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telefone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="silhueta-de-cadeado-aberto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silhueta-de-cadeado-aberto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

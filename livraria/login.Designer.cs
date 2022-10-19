@@ -43,6 +43,7 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnAcessar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cadAberto = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnSenha = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAberto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSenha)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,12 +227,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel4.Controls.Add(this.txtSenha);
             this.panel4.Controls.Add(this.btnSenha);
+            this.panel4.Controls.Add(this.txtSenha);
+            this.panel4.Controls.Add(this.cadAberto);
             this.panel4.Location = new System.Drawing.Point(0, 310);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 40);
             this.panel4.TabIndex = 7;
+            // 
+            // cadAberto
+            // 
+            this.cadAberto.Image = global::livraria.Properties.Resources.silhueta_de_cadeado_aberto;
+            this.cadAberto.Location = new System.Drawing.Point(6, 6);
+            this.cadAberto.Name = "cadAberto";
+            this.cadAberto.Size = new System.Drawing.Size(30, 30);
+            this.cadAberto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cadAberto.TabIndex = 11;
+            this.cadAberto.TabStop = false;
+            this.cadAberto.Visible = false;
             // 
             // txtSenha
             // 
@@ -275,6 +289,7 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cadAberto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSenha)).EndInit();
             this.ResumeLayout(false);
 
@@ -299,5 +314,6 @@
         private PictureBox btnSenha;
         private Button btnAcessar;
         private Button btnSair;
+        private PictureBox cadAberto;
     }
 }

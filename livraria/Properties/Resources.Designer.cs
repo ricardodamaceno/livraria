@@ -333,6 +333,16 @@ namespace livraria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap silhueta_de_cadeado_aberto {
+            get {
+                object obj = ResourceManager.GetObject("silhueta-de-cadeado-aberto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telefone {
             get {
                 object obj = ResourceManager.GetObject("telefone", resourceCulture);
