@@ -69,7 +69,7 @@
             this.pneMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pneMenu.Location = new System.Drawing.Point(0, 0);
             this.pneMenu.Name = "pneMenu";
-            this.pneMenu.Size = new System.Drawing.Size(220, 541);
+            this.pneMenu.Size = new System.Drawing.Size(217, 541);
             this.pneMenu.TabIndex = 0;
             // 
             // usuarioLogado
@@ -105,7 +105,7 @@
             this.btnSair.Location = new System.Drawing.Point(0, 435);
             this.btnSair.Name = "btnSair";
             this.btnSair.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(220, 40);
+            this.btnSair.Size = new System.Drawing.Size(217, 40);
             this.btnSair.TabIndex = 10;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.btnCaixa.Location = new System.Drawing.Point(0, 395);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCaixa.Size = new System.Drawing.Size(220, 40);
+            this.btnCaixa.Size = new System.Drawing.Size(217, 40);
             this.btnCaixa.TabIndex = 9;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.btnPedido.Location = new System.Drawing.Point(0, 355);
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPedido.Size = new System.Drawing.Size(220, 40);
+            this.btnPedido.Size = new System.Drawing.Size(217, 40);
             this.btnPedido.TabIndex = 8;
             this.btnPedido.Text = "Pedido";
             this.btnPedido.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             this.btnAutores.Location = new System.Drawing.Point(0, 315);
             this.btnAutores.Name = "btnAutores";
             this.btnAutores.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnAutores.Size = new System.Drawing.Size(220, 40);
+            this.btnAutores.Size = new System.Drawing.Size(217, 40);
             this.btnAutores.TabIndex = 7;
             this.btnAutores.Text = "Autores";
             this.btnAutores.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.btnEditora.Location = new System.Drawing.Point(0, 275);
             this.btnEditora.Name = "btnEditora";
             this.btnEditora.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnEditora.Size = new System.Drawing.Size(220, 40);
+            this.btnEditora.Size = new System.Drawing.Size(217, 40);
             this.btnEditora.TabIndex = 6;
             this.btnEditora.Text = "Editora";
             this.btnEditora.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.btnCategoria.Location = new System.Drawing.Point(0, 235);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCategoria.Size = new System.Drawing.Size(220, 40);
+            this.btnCategoria.Size = new System.Drawing.Size(217, 40);
             this.btnCategoria.TabIndex = 5;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.btnLivros.Location = new System.Drawing.Point(0, 195);
             this.btnLivros.Name = "btnLivros";
             this.btnLivros.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnLivros.Size = new System.Drawing.Size(220, 40);
+            this.btnLivros.Size = new System.Drawing.Size(217, 40);
             this.btnLivros.TabIndex = 4;
             this.btnLivros.Text = "Livros";
             this.btnLivros.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             this.btnFone.Location = new System.Drawing.Point(0, 155);
             this.btnFone.Name = "btnFone";
             this.btnFone.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnFone.Size = new System.Drawing.Size(220, 40);
+            this.btnFone.Size = new System.Drawing.Size(217, 40);
             this.btnFone.TabIndex = 3;
             this.btnFone.Text = "Telefones";
             this.btnFone.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.btnCliente.Location = new System.Drawing.Point(0, 115);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCliente.Size = new System.Drawing.Size(220, 40);
+            this.btnCliente.Size = new System.Drawing.Size(217, 40);
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -261,7 +261,7 @@
             this.btnFunc.Name = "btnFunc";
             this.btnFunc.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnFunc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnFunc.Size = new System.Drawing.Size(220, 40);
+            this.btnFunc.Size = new System.Drawing.Size(217, 40);
             this.btnFunc.TabIndex = 1;
             this.btnFunc.Text = "Funcionario";
             this.btnFunc.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@
             this.pneLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pneLogo.Location = new System.Drawing.Point(0, 0);
             this.pneLogo.Name = "pneLogo";
-            this.pneLogo.Size = new System.Drawing.Size(220, 75);
+            this.pneLogo.Size = new System.Drawing.Size(217, 75);
             this.pneLogo.TabIndex = 0;
             // 
             // label1
@@ -291,23 +291,32 @@
             // 
             // principal1
             // 
+            this.principal1.AutoSize = true;
+            this.principal1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.principal1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.principal1.Location = new System.Drawing.Point(217, 0);
             this.principal1.Name = "principal1";
-            this.principal1.Size = new System.Drawing.Size(689, 541);
+            this.principal1.Size = new System.Drawing.Size(692, 541);
             this.principal1.TabIndex = 1;
             // 
             // frmAtendente2
             // 
+            this.frmAtendente2.AutoSize = true;
+            this.frmAtendente2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.frmAtendente2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frmAtendente2.Location = new System.Drawing.Point(217, 0);
             this.frmAtendente2.Name = "frmAtendente2";
-            this.frmAtendente2.Size = new System.Drawing.Size(689, 541);
+            this.frmAtendente2.Size = new System.Drawing.Size(692, 541);
             this.frmAtendente2.TabIndex = 2;
             // 
             // frmCliente2
             // 
+            this.frmCliente2.AutoSize = true;
+            this.frmCliente2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.frmCliente2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.frmCliente2.Location = new System.Drawing.Point(217, 0);
             this.frmCliente2.Name = "frmCliente2";
-            this.frmCliente2.Size = new System.Drawing.Size(689, 541);
+            this.frmCliente2.Size = new System.Drawing.Size(692, 541);
             this.frmCliente2.TabIndex = 3;
             // 
             // FrmMenu
@@ -329,6 +338,7 @@
             this.pneLogo.ResumeLayout(false);
             this.pneLogo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
