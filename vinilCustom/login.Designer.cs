@@ -1,4 +1,4 @@
-﻿namespace livraria
+﻿namespace vinilCustom
 {
     partial class login
     {
@@ -112,11 +112,11 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 30);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Sistema de Livraria";
+            this.label1.Text = "Sistema de vinilCustom";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::livraria.Properties.Resources.eng;
+            this.pictureBox1.Image = global::vinilCustom.Properties.Resources.eng;
             this.pictureBox1.Location = new System.Drawing.Point(33, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(244, 228);
@@ -171,7 +171,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::livraria.Properties.Resources.user;
+            this.pictureBox2.Image = global::vinilCustom.Properties.Resources.user;
             this.pictureBox2.Location = new System.Drawing.Point(6, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
@@ -237,7 +237,7 @@
             // 
             // cadAberto
             // 
-            this.cadAberto.Image = global::livraria.Properties.Resources.silhueta_de_cadeado_aberto;
+            this.cadAberto.Image = global::vinilCustom.Properties.Resources.silhueta_de_cadeado_aberto;
             this.cadAberto.Location = new System.Drawing.Point(6, 6);
             this.cadAberto.Name = "cadAberto";
             this.cadAberto.Size = new System.Drawing.Size(30, 30);
@@ -257,7 +257,7 @@
             // 
             // btnSenha
             // 
-            this.btnSenha.Image = global::livraria.Properties.Resources.key;
+            this.btnSenha.Image = global::vinilCustom.Properties.Resources.key;
             this.btnSenha.Location = new System.Drawing.Point(6, 6);
             this.btnSenha.Name = "btnSenha";
             this.btnSenha.Size = new System.Drawing.Size(30, 30);

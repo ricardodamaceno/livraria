@@ -1,4 +1,4 @@
-﻿namespace livraria
+﻿namespace vinilCustom
 {
     partial class FrmAtendente
     {
@@ -213,7 +213,7 @@
             this.btnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNovo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnNovo.Image = global::livraria.Properties.Resources.novo;
+            this.btnNovo.Image = global::vinilCustom.Properties.Resources.novo;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.Location = new System.Drawing.Point(500, 100);
             this.btnNovo.Name = "btnNovo";
@@ -230,7 +230,7 @@
             this.btnGravar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGravar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGravar.Image = global::livraria.Properties.Resources.gravar;
+            this.btnGravar.Image = global::vinilCustom.Properties.Resources.gravar;
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGravar.Location = new System.Drawing.Point(500, 176);
             this.btnGravar.Name = "btnGravar";
@@ -247,7 +247,7 @@
             this.btnAlterar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAlterar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAlterar.Image = global::livraria.Properties.Resources.alterar;
+            this.btnAlterar.Image = global::vinilCustom.Properties.Resources.alterar;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.Location = new System.Drawing.Point(500, 252);
             this.btnAlterar.Name = "btnAlterar";
@@ -264,7 +264,7 @@
             this.btnRemover.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemover.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRemover.Image = global::livraria.Properties.Resources.remover;
+            this.btnRemover.Image = global::vinilCustom.Properties.Resources.remover;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.Location = new System.Drawing.Point(500, 328);
             this.btnRemover.Name = "btnRemover";
@@ -281,7 +281,7 @@
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancelar.Image = global::livraria.Properties.Resources.cancelar;
+            this.btnCancelar.Image = global::vinilCustom.Properties.Resources.cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(500, 404);
             this.btnCancelar.Name = "btnCancelar";

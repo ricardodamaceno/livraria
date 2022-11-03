@@ -1,4 +1,4 @@
-﻿namespace livraria
+﻿namespace vinilCustom
 {
     partial class FrmMenu
     {
@@ -43,9 +43,9 @@
             this.btnFunc = new System.Windows.Forms.Button();
             this.pneLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.principal1 = new livraria.principal();
-            this.frmAtendente2 = new livraria.FrmAtendente();
-            this.frmCliente2 = new livraria.FrmCliente();
+            this.principal1 = new vinilCustom.principal();
+            this.frmAtendente2 = new vinilCustom.FrmAtendente();
+            this.frmCliente2 = new vinilCustom.FrmCliente();
             this.pneMenu.SuspendLayout();
             this.pneLogo.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +100,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSair.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSair.Image = global::livraria.Properties.Resources.sair;
+            this.btnSair.Image = global::vinilCustom.Properties.Resources.sair;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.Location = new System.Drawing.Point(0, 435);
             this.btnSair.Name = "btnSair";
@@ -118,7 +118,7 @@
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCaixa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCaixa.Image = global::livraria.Properties.Resources.caixa1;
+            this.btnCaixa.Image = global::vinilCustom.Properties.Resources.caixa1;
             this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaixa.Location = new System.Drawing.Point(0, 395);
             this.btnCaixa.Name = "btnCaixa";
@@ -127,6 +127,7 @@
             this.btnCaixa.TabIndex = 9;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = true;
+            this.btnCaixa.Visible = false;
             // 
             // btnPedido
             // 
@@ -135,7 +136,7 @@
             this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPedido.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPedido.Image = global::livraria.Properties.Resources.pedidos1;
+            this.btnPedido.Image = global::vinilCustom.Properties.Resources.pedidos1;
             this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPedido.Location = new System.Drawing.Point(0, 355);
             this.btnPedido.Name = "btnPedido";
@@ -144,6 +145,7 @@
             this.btnPedido.TabIndex = 8;
             this.btnPedido.Text = "Pedido";
             this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Visible = false;
             // 
             // btnAutores
             // 
@@ -152,7 +154,7 @@
             this.btnAutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAutores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAutores.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAutores.Image = global::livraria.Properties.Resources.autores1;
+            this.btnAutores.Image = global::vinilCustom.Properties.Resources.autores1;
             this.btnAutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAutores.Location = new System.Drawing.Point(0, 315);
             this.btnAutores.Name = "btnAutores";
@@ -161,6 +163,7 @@
             this.btnAutores.TabIndex = 7;
             this.btnAutores.Text = "Autores";
             this.btnAutores.UseVisualStyleBackColor = true;
+            this.btnAutores.Visible = false;
             // 
             // btnEditora
             // 
@@ -169,7 +172,7 @@
             this.btnEditora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditora.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEditora.Image = global::livraria.Properties.Resources.editora1;
+            this.btnEditora.Image = global::vinilCustom.Properties.Resources.editora1;
             this.btnEditora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditora.Location = new System.Drawing.Point(0, 275);
             this.btnEditora.Name = "btnEditora";
@@ -178,6 +181,7 @@
             this.btnEditora.TabIndex = 6;
             this.btnEditora.Text = "Editora";
             this.btnEditora.UseVisualStyleBackColor = true;
+            this.btnEditora.Visible = false;
             // 
             // btnCategoria
             // 
@@ -186,7 +190,7 @@
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCategoria.Image = global::livraria.Properties.Resources.categoria1;
+            this.btnCategoria.Image = global::vinilCustom.Properties.Resources.categoria1;
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoria.Location = new System.Drawing.Point(0, 235);
             this.btnCategoria.Name = "btnCategoria";
@@ -195,6 +199,7 @@
             this.btnCategoria.TabIndex = 5;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Visible = false;
             // 
             // btnLivros
             // 
@@ -203,7 +208,7 @@
             this.btnLivros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLivros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLivros.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLivros.Image = global::livraria.Properties.Resources.livros1;
+            this.btnLivros.Image = global::vinilCustom.Properties.Resources.livros1;
             this.btnLivros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLivros.Location = new System.Drawing.Point(0, 195);
             this.btnLivros.Name = "btnLivros";
@@ -212,6 +217,7 @@
             this.btnLivros.TabIndex = 4;
             this.btnLivros.Text = "Livros";
             this.btnLivros.UseVisualStyleBackColor = true;
+            this.btnLivros.Visible = false;
             // 
             // btnFone
             // 
@@ -220,7 +226,7 @@
             this.btnFone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnFone.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFone.Image = global::livraria.Properties.Resources.telefone1;
+            this.btnFone.Image = global::vinilCustom.Properties.Resources.telefone1;
             this.btnFone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFone.Location = new System.Drawing.Point(0, 155);
             this.btnFone.Name = "btnFone";
@@ -229,6 +235,7 @@
             this.btnFone.TabIndex = 3;
             this.btnFone.Text = "Telefones";
             this.btnFone.UseVisualStyleBackColor = true;
+            this.btnFone.Visible = false;
             // 
             // btnCliente
             // 
@@ -237,7 +244,7 @@
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCliente.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCliente.Image = global::livraria.Properties.Resources.cliente1;
+            this.btnCliente.Image = global::vinilCustom.Properties.Resources.cliente1;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(0, 115);
             this.btnCliente.Name = "btnCliente";
@@ -255,7 +262,7 @@
             this.btnFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFunc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnFunc.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnFunc.Image = global::livraria.Properties.Resources.funcionarios2;
+            this.btnFunc.Image = global::vinilCustom.Properties.Resources.funcionarios2;
             this.btnFunc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFunc.Location = new System.Drawing.Point(0, 75);
             this.btnFunc.Name = "btnFunc";
@@ -280,13 +287,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(31, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 37);
+            this.label1.Size = new System.Drawing.Size(180, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "RD Livraria";
+            this.label1.Text = "Vinil Custom";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // principal1
