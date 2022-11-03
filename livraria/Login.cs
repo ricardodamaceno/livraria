@@ -2,7 +2,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace vinilCustom
+namespace livraria
 {
     public partial class login : Form
     {
@@ -14,7 +14,7 @@ namespace vinilCustom
         public static string usuario;
 
         //conecxão com banco de dados (SSPI = autenticação do windows)
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_vcustom");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_livraria");
 
         //para dar os comandos sql
         SqlCommand cm = new SqlCommand();

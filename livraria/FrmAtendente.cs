@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace vinilCustom
+namespace livraria
 {
     public partial class FrmAtendente : UserControl
     {
@@ -19,7 +19,7 @@ namespace vinilCustom
         }
 
         //conecxão com banco de dados (SSPI = autenticação do windows)
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_vcustom");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-OOSH39D\SQLEXPRESS;integrated security=SSPI;initial Catalog=db_livraria");
 
         //para dar os comandos sql
         SqlCommand cm = new SqlCommand();

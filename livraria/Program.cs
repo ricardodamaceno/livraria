@@ -1,4 +1,4 @@
-namespace vinilCustom
+namespace livraria
 {
     internal static class Program
     {
